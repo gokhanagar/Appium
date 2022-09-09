@@ -50,8 +50,7 @@ public class Appium02 {
 
 
 
-
-
+    
 
 
 
