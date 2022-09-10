@@ -21,8 +21,13 @@ public class Appium02 {
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+        //eger appActivity ve appPackage kullanilacaksa app path gerekli degil
+        //desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\apiDemos.apk");
+        //app acilirkeen izin istediginde appActivity ve appPackage tanimlayarak bu sorunu gecebilirsiniz
+        //app telefonda acin
+        //terminal veya cmd prompt acarak adb shell yazin
+        //sonra dumpsys window | grep -E "mCurrentFocus" komutunu girince appActivity ve appPackage bilgilerine ulasabiliriz.
 
-//        desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\apiDemos.apk");
         desiredCapabilities.setCapability("appPackage","com.touchboarder.android.api.demos");
         desiredCapabilities.setCapability("appActivity","com.touchboarder.androidapidemos.MainActivity");
 
@@ -50,7 +55,7 @@ public class Appium02 {
 
 
 
-    
+
 
 
 
