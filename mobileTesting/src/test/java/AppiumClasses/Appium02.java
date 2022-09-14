@@ -16,7 +16,6 @@ public class Appium02 {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
 
-
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
@@ -28,8 +27,8 @@ public class Appium02 {
         //terminal veya cmd prompt acarak adb shell yazin
         //sonra dumpsys window | grep -E "mCurrentFocus" komutunu girince appActivity ve appPackage bilgilerine ulasabiliriz.
 
-        desiredCapabilities.setCapability("appPackage","com.touchboarder.android.api.demos");
-        desiredCapabilities.setCapability("appActivity","com.touchboarder.androidapidemos.MainActivity");
+        desiredCapabilities.setCapability("appPackage", "com.touchboarder.android.api.demos");
+        desiredCapabilities.setCapability("appActivity", "com.touchboarder.androidapidemos.MainActivity");
 
 
         //appium server url
@@ -37,48 +36,7 @@ public class Appium02 {
         Thread.sleep(3000);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
