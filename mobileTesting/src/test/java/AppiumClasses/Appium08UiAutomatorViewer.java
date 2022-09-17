@@ -44,10 +44,4 @@ public class Appium08UiAutomatorViewer {
     }
 
 
-
-
-
-
-
-
 }
