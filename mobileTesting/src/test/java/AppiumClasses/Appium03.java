@@ -94,6 +94,14 @@ public class Appium03 {
     @Test
     public void Task2() throws InterruptedException, MalformedURLException {
 
+        /*
+            launch GestureTool app
+            click addGesture button
+            send text to name box "testing"
+            click done
+            verify testing gesture is created
+        */
+
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
