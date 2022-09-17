@@ -92,7 +92,42 @@ public class Appium03 {
 
 
     @Test
-    public void Task2(){
+    public void Task2() throws InterruptedException, MalformedURLException {
+
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
+        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+        desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\gestureTool.apk");
+
+        //noReset
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+
+        //appium server url
+        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+        Thread.sleep(3000);
+
+        //click add gesture
+        driver.findElement(By.xpath("//android.widget.Button[@text='Add gesture']")).click();
+        Thread.sleep(3000);
+
+        //search button
+
+        driver.findElement(By.id("com.davemac327.gesture.tool:id/gesture_name")).sendKeys("test");
+
+        driver.findElement(By.id("com.davemac327.gesture.tool:id/gestures_overlay")).click();
+        Thread.sleep(3000);
+
+        //click done
+        driver.findElement(By.id("com.davemac327.gesture.tool:id/done")).click();
+        Thread.sleep(3000);
+
+        String expectedText="test";
+        String actualText = driver.findElement(By.xpath("//android.widget.TextView[@text ='test']")).getText();
+
+        Assert.assertEquals(expectedText,actualText);
 
 
 
@@ -125,10 +160,6 @@ public class Appium03 {
 
 
 
-
-
-
-        
     }
 
 
