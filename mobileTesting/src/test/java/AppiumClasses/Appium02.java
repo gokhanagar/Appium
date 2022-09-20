@@ -15,7 +15,6 @@ public class Appium02 {
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
-
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
