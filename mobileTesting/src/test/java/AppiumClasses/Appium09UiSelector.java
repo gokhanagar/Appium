@@ -33,16 +33,16 @@ public class Appium09UiSelector {
         Thread.sleep(3000);
 
         // resourceId ile
-       // driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")")).click();
+        // driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")")).click();
 
         // className
-     //   driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")")).click();
+        //   driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")")).click();
 
         //className text ile beraber
         //driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").text(\"Add gesture\")")).click();
 
         //className() index ile
-      //  driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").index(0)")).click();
+        //  driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").index(0)")).click();
 
         /*
         List<WebElement> buttons = driver.findElements
@@ -59,7 +59,7 @@ public class Appium09UiSelector {
         */
 
 
-       // driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").textContains(\"load\")")).click();
+        // driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").textContains(\"load\")")).click();
 
         //Thread.sleep(2000);
 
@@ -70,15 +70,6 @@ public class Appium09UiSelector {
         System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").checkable(false)")).getAttribute("checkable"));
 
         System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)")).getAttribute("clickable"));
-
-
-
-
-
-
-
-
-
 
 
     }

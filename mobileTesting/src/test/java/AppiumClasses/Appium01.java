@@ -31,6 +31,7 @@ public class Appium01 {
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
         Thread.sleep(3000);
 
+
         driver.findElement(By.id("com.davemac327.gesture.tool:id/addButton"));
 
         driver.findElement(By.xpath("//*[@text='Add gesture']"));
