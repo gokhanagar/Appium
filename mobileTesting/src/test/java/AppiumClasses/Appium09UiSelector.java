@@ -72,6 +72,7 @@ public class Appium09UiSelector {
         System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)")).getAttribute("clickable"));
 
 
+        
     }
 
 }
