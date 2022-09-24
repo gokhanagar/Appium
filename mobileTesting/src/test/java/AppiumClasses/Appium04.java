@@ -50,17 +50,17 @@ public class Appium04 {
         WebElement num8 = driver.findElement(By.id("com.google.android.calculator:id/digit_8"));
         WebElement num9 = driver.findElement(By.id("com.google.android.calculator:id/digit_9"));
 
-       WebElement multiply = driver.findElement(By.id("com.google.android.calculator:id/op_mul"));
-       WebElement equal = driver.findElement(By.id("com.google.android.calculator:id/eq"));
+        WebElement multiply = driver.findElement(By.id("com.google.android.calculator:id/op_mul"));
+        WebElement equal = driver.findElement(By.id("com.google.android.calculator:id/eq"));
 
-       num1.click();
-       num5.click();
-       multiply.click();
-       num3.click();
+        num1.click();
+        num5.click();
+        multiply.click();
+        num3.click();
         Thread.sleep(5000);
 
         String expectedPreResult = driver.findElement(By.id("com.google.android.calculator:id/result_preview")).getText();
-        Assert.assertEquals(expectedPreResult,"45");
+        Assert.assertEquals(expectedPreResult, "45");
         Thread.sleep(5000);
 
         equal.click();
@@ -68,43 +68,12 @@ public class Appium04 {
         Thread.sleep(5000);
         String actualResult = driver.findElement(By.id("com.google.android.calculator:id/result_final")).getText();
 
-        Assert.assertEquals(expectedPreResult,actualResult);
+        Assert.assertEquals(expectedPreResult, actualResult);
         System.out.println("ex" + expectedPreResult);
         System.out.println("ac" + actualResult);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
