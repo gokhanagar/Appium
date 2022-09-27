@@ -27,7 +27,7 @@ public class Appium03 {
         desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\gestureTool.apk");
 
         //noReset
-        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
         //appium server url
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
@@ -40,11 +40,10 @@ public class Appium03 {
         //driver.findElement(By.id("id/addButton")).click();
 
         //xpath index +ile bulduk
-      //  driver.findElement(By.xpath("//android.widget.Button[2]")).click();
+        //  driver.findElement(By.xpath("//android.widget.Button[2]")).click();
 
         //xpath text
         driver.findElement(By.xpath("//android.widget.Button[@text='Add gesture']")).click();
-
 
 
     }
@@ -69,7 +68,7 @@ public class Appium03 {
         desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\gestureTool.apk");
 
         //noReset
-        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
         //appium server url
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
@@ -83,7 +82,7 @@ public class Appium03 {
         String expectedTitle = "Test a gesture";
         String actualTitle = driver.findElement(By.id("android:id/title")).getText();
 
-        Assert.assertEquals(expectedTitle,actualTitle);
+        Assert.assertEquals(expectedTitle, actualTitle);
 
         //close app
         driver.quit();
@@ -111,7 +110,7 @@ public class Appium03 {
         desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\gestureTool.apk");
 
         //noReset
-        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
         //appium server url
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
@@ -132,68 +131,13 @@ public class Appium03 {
         driver.findElement(By.id("com.davemac327.gesture.tool:id/done")).click();
         Thread.sleep(3000);
 
-        String expectedText="test";
+        String expectedText = "test";
         String actualText = driver.findElement(By.xpath("//android.widget.TextView[@text ='test']")).getText();
 
-        Assert.assertEquals(expectedText,actualText);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Assert.assertEquals(expectedText, actualText);
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
