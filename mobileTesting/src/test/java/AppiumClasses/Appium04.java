@@ -72,8 +72,6 @@ public class Appium04 {
         System.out.println("ex" + expectedPreResult);
         System.out.println("ac" + actualResult);
 
-
     }
-
 
 }
