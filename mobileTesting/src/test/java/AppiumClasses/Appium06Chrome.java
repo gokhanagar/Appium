@@ -23,8 +23,8 @@ public class Appium06Chrome {
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
-        desiredCapabilities.setCapability("chromedriverExecutable","C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\driver\\chromedriver.exe");
+        desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+        desiredCapabilities.setCapability("chromedriverExecutable", "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\driver\\chromedriver.exe");
 
 
         //noReset
@@ -52,51 +52,17 @@ public class Appium06Chrome {
         for (Object contextName : contextNames) {
             System.out.println(contextName);//NATIVE_APP   CHROMIUM
             Thread.sleep(3000);
-            if (contextName.toString().contains("CHROMIUM")){
-               // alttaki kodda hangi app turunde calisacaksak onu set ediyoruz
+            if (contextName.toString().contains("CHROMIUM")) {
+                // alttaki kodda hangi app turunde calisacaksak onu set ediyoruz
                 driver.context((String) contextName);//WEBAPP DEVAM EDECEGIM
                 Thread.sleep(10000);
             }
         }
         //artik set ettigimiz context ile test devam ediyoruz.
-        System.out.println("2." +driver.getContext());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println("2." + driver.getContext());
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
