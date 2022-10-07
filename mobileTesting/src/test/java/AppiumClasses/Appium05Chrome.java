@@ -17,7 +17,6 @@ import java.util.Set;
 public class Appium05Chrome {
 
 
-
     @Test
     public void Task1() throws InterruptedException, MalformedURLException {
 
@@ -44,20 +43,19 @@ public class Appium05Chrome {
         System.out.println("1." + driver.getContext());
 
 
-
         Thread.sleep(3000);
         Set contextNames = driver.getContextHandles();
         //burda mevcut app turunu(context) bir bir yazdiriyoruz
         for (Object contextName : contextNames) {
             System.out.println(contextName);//NATIVE_APP   CHROMIUM
             Thread.sleep(3000);
-            if (contextName.toString().contains("CHROMIUM")){
+            if (contextName.toString().contains("CHROMIUM")) {
                 // alttaki kodda hangi app turunde calisacaksak onu set ediyoruz
                 driver.context((String) contextName);//WEBAPP DEVAM EDECEGIM
                 Thread.sleep(10000);
             }
         }
-        System.out.println("2." +driver.getContext());
+        System.out.println("2." + driver.getContext());
 
         WebElement searchBar = driver.findElement(By.xpath("//input[@class='header-search-bar']"));
 
@@ -81,64 +79,7 @@ public class Appium05Chrome {
         cancelButton.click();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
