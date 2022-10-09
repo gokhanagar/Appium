@@ -16,46 +16,4 @@ public class Driver {
 
     }
 
-    public static WebDriver driver;
-
-    public static WebDriver getDriver() {
-        if (driver == null) {
-            switch (ConfigReader.getProperty("browser")) {
-                case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                    break;
-                case "safari":
-                    WebDriverManager.safaridriver().setup();
-                    driver = new SafariDriver();
-                    break;
-                case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
-                    break;
-                case "headless-chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-            }
-
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        }
-        return driver;
-    }
-
-    public static void closeDriver() {
-        if (driver != null) { // driver'a deger atanmissa
-            driver.close();
-            driver = null;
-        }
-
-
-    }
-
-
 }

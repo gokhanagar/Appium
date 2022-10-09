@@ -6,11 +6,14 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.android.Duolingo;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DuolingoTest1 {
+
+    Duolingo duo = new Duolingo();
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -23,38 +26,43 @@ public class DuolingoTest1 {
 
 
 
-        AndroidDriver driver = new AndroidDriver(new URL("http:127.0.0.1:4723/wd/hub"), desiredCapabilities);
-        Thread.sleep(5000);
+        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+
 
         WebElement getStarted = driver.findElement(By.id("com.duolingo:id/introFlowNewUserButton"));
-        getStarted.click();
         Thread.sleep(3000);
+        getStarted.click();
 
         WebElement italy=driver.findElement(By.xpath("//android.widget.TextView[@text='Italian']"));
         String italyStr= italy.getText();
         System.out.println("italyStr = " + italyStr);
 
+        WebElement german = driver.findElement(By.xpath("//android.widget.TextView[@text='German']"));
+        german.click();
+        Thread.sleep(10000);
 
-        /*
-        WebElement getGerman = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.TextView");
-        getGerman.click();
-        Thread.sleep(5000);
-        WebElement getOther = driver.findElementByXPath("//android.widget.LinearLayout[@content-desc=\"other\"]/android.widget.TextView");
-        getOther.click();
+        WebElement other = driver.findElement(By.cssSelector(
+                "android.widget.LinearLayout[id='com.duolingo:id/motivationCard']"));
+
+        other.click();
         Thread.sleep(4000);
 
-        WebElement getReguler = driver.findElementById("com.duolingo:id/xpGoalOptionRegular");
-        getReguler.click();
+        WebElement regular = driver.findElement(By.cssSelector("android.widget.LinearLayout[id='com.duolingo:id/xpGoalOptionRegular']"));
+        regular.click();
         Thread.sleep(4000);
-        WebElement getCont = driver.findElementById("com.duolingo:id/xpGoalContinueButton");
-        getCont.click();
+
+        WebElement con = driver.findElement(By.cssSelector("android.widget.TextView[id='com.duolingo:id/xpGoalContinueButton']"));
+        con.click();
         Thread.sleep(4000);
-        WebElement getSome = driver.findElementById("com.duolingo:id/placementHeader");
-        getSome.click();
+
+        WebElement someGerman = driver.findElement(By.cssSelector("android.widget.TextView[id='com.duolingo:id/placementHeader']"));
+        someGerman.click();
         Thread.sleep(4000);
-        WebElement getStartTest = driver.findElementById("com.duolingo:id/primaryButton");
-        getStartTest.click();/////
-        */
+
+        WebElement startTest = driver.findElement(By.cssSelector("android.widget.TextView[id='com.duolingo:id/primaryButton']"));
+        startTest.click();
+
+
     }
 }
 
