@@ -12,7 +12,6 @@ import java.net.URL;
 
 public class DuolingoTest1 {
 
-    Duolingo duo = new Duolingo();
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
