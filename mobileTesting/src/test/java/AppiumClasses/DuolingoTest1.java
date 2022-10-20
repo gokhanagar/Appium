@@ -59,6 +59,5 @@ public class DuolingoTest1 {
         WebElement startTest = driver.findElement(By.cssSelector("android.widget.TextView[id='com.duolingo:id/primaryButton']"));
         startTest.click();
 
-
     }
 }
