@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.net.MalformedURLException;
 import java.util.List;
 
-public class Appium11 extends AppiumBase{
+public class Appium11 extends AppiumBase {
 
 
     @Test
@@ -46,21 +46,6 @@ public class Appium11 extends AppiumBase{
         driver.findElement(By.id("android:id/edit")).sendKeys("test");
         Thread.sleep(2000);
         driver.findElement(By.id("android:id/button1")).click();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
