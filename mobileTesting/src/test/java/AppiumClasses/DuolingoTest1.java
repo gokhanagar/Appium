@@ -30,8 +30,8 @@ public class DuolingoTest1 {
         Thread.sleep(3000);
         getStarted.click();
 
-        WebElement italy=driver.findElement(By.xpath("//android.widget.TextView[@text='Italian']"));
-        String italyStr= italy.getText();
+        WebElement italy = driver.findElement(By.xpath("//android.widget.TextView[@text='Italian']"));
+        String italyStr = italy.getText();
         System.out.println("italyStr = " + italyStr);
 
         WebElement german = driver.findElement(By.xpath("//android.widget.TextView[@text='German']"));
@@ -60,6 +60,5 @@ public class DuolingoTest1 {
         startTest.click();
 
 
-        
     }
 }
