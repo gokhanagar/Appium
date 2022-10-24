@@ -18,9 +18,7 @@ public class Appium14Scroll extends AppiumBase{
 
         int start_x = dimension.height * 0.8
 
-
-
-
+                
 
 
 
