@@ -16,9 +16,12 @@ public class Appium14Scroll extends AppiumBase{
         //bu kod ile cihazin olcusunu almis olduk.
         Dimension dimension = driver.manage().window().getSize();
 
-        int start_x = dimension.height * 0.8
+        int start_x = (int) (dimension.width * 0.5);
+        int start_y = (int) (dimension.height * 0.8);
 
-                
+        int end_x = (int) (dimension.width * 0.5);
+        int end_y = (int) (dimension.height * 0.2);
+
 
 
 
