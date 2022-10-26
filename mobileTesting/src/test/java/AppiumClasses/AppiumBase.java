@@ -32,35 +32,7 @@ public class AppiumBase {
         return driver;
 
 
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
