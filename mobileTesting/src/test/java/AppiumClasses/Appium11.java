@@ -1,10 +1,9 @@
 package AppiumClasses;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.util.List;
@@ -32,6 +31,7 @@ public class Appium11 extends AppiumBase {
 //        }
 
         //Wifi settings e gore
+        /*
         List<WebElement> list = driver.findElements(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.TextView\").text(\"WiFi settings\").enabled(false)"));
         if (list.size() > 0) {
             String isEnabled = driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.TextView\").text(\"WiFi settings\").enabled(false)")).getAttribute("enabled");
@@ -39,7 +39,7 @@ public class Appium11 extends AppiumBase {
                 driver.findElement(By.id("android:id/checkbox")).click();
             }
         }
-
+        */
         Thread.sleep(2000);
         driver.findElement(By.xpath("//android.widget.TextView[@text='WiFi settings']")).click();
         Thread.sleep(2000);

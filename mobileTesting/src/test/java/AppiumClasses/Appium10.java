@@ -1,12 +1,11 @@
 package AppiumClasses;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -33,7 +32,7 @@ public class Appium10 {
 
 
         driver.findElement(By.xpath("//android.widget.TextView[@text='API Demos']")).click();
-        driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.TextView\").text(\"API Demos\")")).click();
+      //  driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().className(\"android.widget.TextView\").text(\"API Demos\")")).click();
 
         driver.findElement(By.xpath("//android.widget.TextView[@text='Preference']")).click();
         Thread.sleep(2000);

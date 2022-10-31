@@ -2,10 +2,10 @@ package AppiumClasses;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -43,7 +43,7 @@ public class Appium03 {
         //  driver.findElement(By.xpath("//android.widget.Button[2]")).click();
 
         //xpath text
-        driver.findElement(By.xpath("//android.widget.Button[@text='Add gesture']")).click();
+       // driver.findElement(By.xpath("//android.widget.Button[@text='Add gesture']")).click();
 
 
     }

@@ -19,7 +19,7 @@ public class ReusableMethods {
 
     // Visibilty
     public static void waitForVisibilty(WebElement element) {
-        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10)).
+        new WebDriverWait(Driver.getDriver(), 10).
                 until(ExpectedConditions.visibilityOf(element));
     }
 

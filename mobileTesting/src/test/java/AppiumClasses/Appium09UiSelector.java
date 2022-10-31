@@ -1,15 +1,11 @@
 package AppiumClasses;
-
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.junit.Test;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 
 public class Appium09UiSelector {
 
@@ -67,9 +63,9 @@ public class Appium09UiSelector {
 
         //UiSelector ile kullanilabilecek methodlar
 
-        System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").checkable(false)")).getAttribute("checkable"));
+       // System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").checkable(false)")).getAttribute("checkable"));
 
-        System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)")).getAttribute("clickable"));
+        //System.out.println(driver.findElement(new AppiumBy.ByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)")).getAttribute("clickable"));
 
 
 

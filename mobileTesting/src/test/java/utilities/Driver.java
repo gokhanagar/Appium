@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
@@ -32,7 +33,7 @@ public class Driver {
 
                     try {
                         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), dCaps);
-                        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+                        Driver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }

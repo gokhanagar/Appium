@@ -27,7 +27,7 @@ public class AppiumBase {
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         //appium server url
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+
         Thread.sleep(4000);
         return driver;
 
