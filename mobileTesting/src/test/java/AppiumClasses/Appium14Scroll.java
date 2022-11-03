@@ -1,12 +1,12 @@
 package AppiumClasses;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.junit.Test;
 import org.openqa.selenium.Dimension;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class Appium14Scroll extends AppiumBase{
+public class Appium14Scroll extends AppiumBase {
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -23,87 +23,7 @@ public class Appium14Scroll extends AppiumBase{
         int end_y = (int) (dimension.height * 0.2);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
