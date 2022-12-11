@@ -21,15 +21,15 @@ public class Class01 {
         //desiredCapabilities.setCapability(CapabilityType.PLATFORM_NAME,"Android");
         //desiredCapabilities.setCapability("platformName","Android");
 
-        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
-        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"AndroidEmulator");
-        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"11.0");
-        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
+        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         //desiredCapabilities.setCapability("automationName","UiAutomator2");
-        desiredCapabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\gestureTool.apk");
+        desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\gestureTool.apk");
 
-                                                             //appium server url
-        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),desiredCapabilities);
+        //appium server url
+        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
         Thread.sleep(3000);
 
         driver.findElement(By.id("com.davemac327.gesture.tool:id/addButton"));
@@ -41,40 +41,7 @@ public class Class01 {
         driver.findElement(By.xpath("//android.widget.Button[@text='Add gesture']")).click();
 
 
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
