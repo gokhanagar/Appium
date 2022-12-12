@@ -30,19 +30,21 @@ public class Appium02 {
         capabilities.setCapability("appPackage","com.davemac327.gesture.tool");
         capabilities.setCapability("appActivity","com.davemac327.gesture.tool.GestureBuilderActivity");
 
+
         AndroidDriver<MobileElement> driver =
                 new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 
         System.out.println("app yuklendi");
-        //Thread.sleep(3000);
+        Thread.sleep(3000);
         driver.findElementById("com.android.permissioncontroller:id/continue_button").click();
-
+        Thread.sleep(5000);
         MobileElement okButton = driver.findElementByXPath("//android.widget.Button[@text='OK']");
         okButton.click();
         System.out.println("izinler onaylandi");
 
         MobileElement homeScreentitle = driver.findElementById("android:id/title");
         Assert.assertTrue(homeScreentitle.isDisplayed());
+        System.out.println("Ana sayfa acildi");
 
 
 
