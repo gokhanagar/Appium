@@ -33,6 +33,11 @@ public class Appium03 {
         AndroidDriver<MobileElement> driver =
                 new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 
+        //asagidaki kod tel kilitli ise acmamizi sagliyor
+        if(driver.isDeviceLocked()){
+            driver.unlockDevice();
+        }
+
         System.out.println("app yuklendi");
         Thread.sleep(3000);
         driver.findElementById("com.android.permissioncontroller:id/continue_button").click();
