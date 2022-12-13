@@ -58,7 +58,7 @@ public class Appium05 {
         System.out.println("Pre result " + preResult.getText());
         String preResult2 =preResult.getText();
         equal.click();
-
+        Thread.sleep(3000);
         MobileElement result = driver.findElementById("com.google.android.calculator:id/result_final");
         System.out.println("final result " + result.getText() );
 
