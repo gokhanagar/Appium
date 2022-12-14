@@ -4,7 +4,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -28,6 +27,7 @@ public class Appium01 {
         capabilities.setCapability(MobileCapabilityType.APP,filePath + "\\src\\Apps\\gestureTool.apk");
         capabilities.setCapability("appPackage","com.davemac327.gesture.tool");
         capabilities.setCapability("appActivity","com.davemac327.gesture.tool.GestureBuilderActivity");
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,"60000");
 
         AndroidDriver<MobileElement> driver =
                 new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);

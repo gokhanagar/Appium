@@ -53,8 +53,8 @@ public class Appium07WebAppChrome {
         MobileElement anaSayfaLogo = driver.findElementByCssSelector("a[id='nav-logo-sprites']");
         Assert.assertTrue(anaSayfaLogo.isDisplayed());
 
-        MobileElement signIn = driver.findElementByCssSelector("a[class='nav-a nav-show-sign-in']");
-        signIn.click();
+        MobileElement signInButton = driver.findElementByCssSelector("a[class='nav-a nav-show-sign-in']");
+        signInButton.click();
         Thread.sleep(2000);
         MobileElement emailNumber = driver.findElementByCssSelector("label[for='ap_email_login']");
         Assert.assertTrue(emailNumber.isDisplayed());
