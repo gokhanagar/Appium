@@ -10,11 +10,11 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Appium10 {
+public class Appium10 extends BaseClass{
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
-
+        /*
         DesiredCapabilities capabilities = new DesiredCapabilities();
         String filePath = System.getProperty("user.dir");
 
@@ -29,7 +29,9 @@ public class Appium10 {
         AndroidDriver<MobileElement> driver =
                 new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
+         */
 
+        AndroidDriver driver = getAndroidDriver();
         System.out.println("App intstalled...");
 
         //api demos butonuna tikla
