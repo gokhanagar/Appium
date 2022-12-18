@@ -20,8 +20,8 @@ public class Appium12BrowserStackIos {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "gkhanaar_KMm3nN");
-        caps.setCapability("browserstack.key", "nZtYn4hGrx9MT1nuwm7p");
+        caps.setCapability("browserstack.user", "");
+        caps.setCapability("browserstack.key", "");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://444bd0308813ae0dc236f8cd461c02d3afa7901d");
