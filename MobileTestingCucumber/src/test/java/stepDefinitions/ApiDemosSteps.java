@@ -158,16 +158,17 @@ public class ApiDemosSteps {
     }
 
     @And("kullanici Search butununa tikladi")
-    public void kullaniciSearchButununaTikladi() throws InterruptedException {
+    public void kullaniciSearchButununaTikladi()  {
 
         tapOn(screens.popupMenuScreen().searchButton);
-        //wait(2);
+
     }
 
     @Then("popup mesaji onayla")
     public void popupMesajiOnayla() {
-        //System.out.println(screens.popupMenuScreen().popupMessage.isDisplayed());
-        isElementPresent(screens.popupMenuScreen().popupMessage);
+        String message = screens.popupMenuScreen().popupMessage.getAttribute("name");
+        Assert.assertTrue(message.contains("Search"));
+        System.out.println("tam mesaj = " + message);
 
     }
 

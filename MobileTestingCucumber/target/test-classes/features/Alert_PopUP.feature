@@ -9,6 +9,6 @@
       Then kullanici "Views" ekraninda
       And kullanici "Popup Menu" butununa tikladi
       And kullici make popup butonuna tikladi
-      And kullanici "Search" butununa tikladi
+      And kullanici Search butununa tikladi
       Then popup mesaji onayla
       Then screenshot al

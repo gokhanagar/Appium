@@ -18,7 +18,7 @@ public class PopupMenuScreen {
     @AndroidFindBy(className = "android.widget.Button")
     public MobileElement makePopupButton;
 
-    @AndroidFindBy(xpath = "(//android.widget.Toast)[1]")
+    @AndroidFindBy(xpath = "//android.widget.Toast")
     public MobileElement popupMessage;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Search']")
