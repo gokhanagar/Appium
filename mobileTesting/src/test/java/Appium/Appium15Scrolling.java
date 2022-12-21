@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class Appium15Scrolling extends BaseClass{
+public class Appium15Scrolling extends BaseClass {
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -56,23 +56,7 @@ public class Appium15Scrolling extends BaseClass{
          */
 
 
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
 
 
 }
