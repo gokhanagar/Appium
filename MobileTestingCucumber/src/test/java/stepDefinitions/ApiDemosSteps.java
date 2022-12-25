@@ -35,13 +35,13 @@ public class ApiDemosSteps {
 
     @And("kullanici API Demos butonuna tikladi")
     public void kullaniciAPIDemosButonunaTikladi() {
-       tapOn(screens.mainScreen().apiDemosButton);
+        tapOn(screens.mainScreen().apiDemosButton);
 
     }
 
     @Then("Kullanici API Demos ekraninda")
     public void kullaniciAPIDemosEkraninda() {
-        Assert.assertTrue( screens.apiDemosScreen().apiDemosTitle.isDisplayed());
+        Assert.assertTrue(screens.apiDemosScreen().apiDemosTitle.isDisplayed());
     }
 
     @And("kullanici Preference butonuna tikladi")
@@ -61,7 +61,7 @@ public class ApiDemosSteps {
 
     @And("kullanici Wifi check box secmis olacak")
     public void kullaniciWifiCheckBoxSecmisOlacak() {
-        if(screens.preferenceDependenciesScreen().checkbox.getAttribute("checked").equals("false")){
+        if (screens.preferenceDependenciesScreen().checkbox.getAttribute("checked").equals("false")) {
 
             tapOn(screens.preferenceDependenciesScreen().checkbox);
 
@@ -83,7 +83,7 @@ public class ApiDemosSteps {
 
     @And("kullanici {string} yazdi")
     public void kullaniciYazdi(String text) {
-        enterText(screens.preferenceDependenciesScreen().textBox,text,true);
+        enterText(screens.preferenceDependenciesScreen().textBox, text, true);
     }
 
     @And("kullanici ok butonuna tikladi")
@@ -113,7 +113,7 @@ public class ApiDemosSteps {
     @And("check box secili olmali")
     public void checkBoxSeciliOlmali() {
 
-        if(screens.preferenceDependenciesScreen().checkbox.getAttribute("checked").equals("false")){
+        if (screens.preferenceDependenciesScreen().checkbox.getAttribute("checked").equals("false")) {
             tapOn(screens.switchScreen().checkBox);
         }
 
@@ -122,7 +122,7 @@ public class ApiDemosSteps {
     @And("ilk swicth butonu kapali")
     public void ilkSwicthButonuKapali() {
 
-        if(screens.switchScreen().firstSwitch.getAttribute("checked").equals("true")){
+        if (screens.switchScreen().firstSwitch.getAttribute("checked").equals("true")) {
             tapOn(screens.switchScreen().firstSwitch);
         }
 
@@ -130,7 +130,7 @@ public class ApiDemosSteps {
 
     @And("ikinci switch butonu acik")
     public void ikinciSwitchButonuAcik() {
-        if(screens.switchScreen().secondSwitch.getAttribute("checked").equals("false")){
+        if (screens.switchScreen().secondSwitch.getAttribute("checked").equals("false")) {
             tapOn(screens.switchScreen().secondSwitch);
         }
 
@@ -158,7 +158,7 @@ public class ApiDemosSteps {
     }
 
     @And("kullanici Search butununa tikladi")
-    public void kullaniciSearchButununaTikladi()  {
+    public void kullaniciSearchButununaTikladi() {
 
         tapOn(screens.popupMenuScreen().searchButton);
 
@@ -181,10 +181,10 @@ public class ApiDemosSteps {
         System.out.println("webview tikladiktan sonra ===> " + Driver.getAppiumDriver().getContext());
         Set<String> allContext = Driver.getAppiumDriver().getContextHandles();
 
-        for(String each : allContext){
+        for (String each : allContext) {
 
             System.out.println(each);
-            if(each.contains("WEBVIEW")){
+            if (each.contains("WEBVIEW")) {
 
                 Driver.getAppiumDriver().context("WEBVIEW");
             }
@@ -194,11 +194,6 @@ public class ApiDemosSteps {
 
 
     }
-
-
-
-
-
 
 
 }
