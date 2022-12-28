@@ -19,13 +19,15 @@ public class Deneme {
 
         Driver.getAppiumDriver();
 
-        
+
     }
 
 
 
 
 
+
+    
 
 
 
