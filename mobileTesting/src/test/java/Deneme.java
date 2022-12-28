@@ -15,14 +15,11 @@ public class Deneme {
     PreferenceDependenciesScreen preferenceDependenciesScreen = new PreferenceDependenciesScreen();
 
     @Test
-    public void deneem(){
+    public void deneme(){
 
         Driver.getAppiumDriver();
 
-
-
-
-
+        
     }
 
 
