@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class Task extends BaseClass{
+public class Task extends BaseClass {
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -36,7 +36,7 @@ public class Task extends BaseClass{
 
         TouchAction touchAction = new TouchAction(driver);
 
-        for(int i=0; i<3; i++){
+        for (int i = 0; i < 3; i++) {
             touchAction.press(PointOption.point(start_x, start_y)).moveTo(PointOption.point(end_x, end_y)).
                     release().perform();
 
@@ -46,58 +46,7 @@ public class Task extends BaseClass{
         driver.findElementByCssSelector("android.widget.TextView[text='Switches']").click();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
