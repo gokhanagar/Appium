@@ -59,81 +59,12 @@ public class Appium06NativeChrome {
 
         Thread.sleep(5000);
         MobileElement welcomeText = driver.findElementByCssSelector("android.view.View[text='Welcome']");
-        Assert.assertEquals(welcomeText.getText(),"Welcome");
+        Assert.assertEquals(welcomeText.getText(), "Welcome");
         System.out.println("test bitti");
 
         Thread.sleep(5000);
         //close session
         //driver.closeApp();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
