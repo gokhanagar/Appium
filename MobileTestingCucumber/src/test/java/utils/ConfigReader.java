@@ -17,6 +17,8 @@ public class ConfigReader {
             System.out.println("Configuration file is not exist.");
         }
     }
+
+    
     //will return value from config
     public static String getProperty(String key){
         return properties.getProperty(key);
