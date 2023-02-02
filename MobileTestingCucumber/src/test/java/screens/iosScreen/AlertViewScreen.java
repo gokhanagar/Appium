@@ -7,6 +7,7 @@ import utils.Driver;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class AlertViewScreen {
+
     public AlertViewScreen() {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()),this);
     }
