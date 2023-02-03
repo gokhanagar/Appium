@@ -35,4 +35,6 @@ public class AlertViewScreen {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"Switches\"]")
     public MobileElement switchesTitle;
+
+
 }
