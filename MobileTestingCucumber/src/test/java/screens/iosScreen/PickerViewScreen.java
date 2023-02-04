@@ -9,6 +9,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 
 public class PickerViewScreen {
+
     public PickerViewScreen(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()),this);
     }
@@ -24,5 +25,6 @@ public class PickerViewScreen {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name=\"Picker View\"]")
     public MobileElement pickerViewTitle;
+
 
 }
