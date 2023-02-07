@@ -64,8 +64,6 @@ public class Screens {
         return dragAndDropScreen;
     }
 
-
-
     public ViewsScreen viewsScreen(){
         if (viewsScreen == null) {
             viewsScreen = new ViewsScreen();
