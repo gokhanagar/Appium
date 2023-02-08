@@ -11,6 +11,7 @@ import utils.ReusableMethods;
 import java.util.HashMap;
 
 public class iOS extends ReusableMethods {
+    
     Screens screens = new Screens();
     @When("kullanici alert view tikladi")
     public void kullaniciAlertViewTikladi() {
