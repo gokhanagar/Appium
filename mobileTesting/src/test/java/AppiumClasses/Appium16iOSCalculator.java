@@ -26,4 +26,6 @@ public class Appium16iOSCalculator {
         Assert.assertEquals(result.getText(),"73");
 
     }
+
+
 }
