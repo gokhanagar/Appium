@@ -8,6 +8,7 @@ import screens.Screens;
 import utils.ReusableMethods;
 
 public class PickerViewSteps extends ReusableMethods {
+
      Screens screens = new Screens();
     @When("kullanici Picker View tikladi")
     public void kullaniciPickerViewTikladi() {
@@ -40,4 +41,5 @@ public class PickerViewSteps extends ReusableMethods {
         Assert.assertEquals(screens.pickerViewScreen().secondColumn.getText(),ikinci);
         Assert.assertEquals(screens.pickerViewScreen().thirdColumn.getText(),ucuncu);
     }
+
 }
