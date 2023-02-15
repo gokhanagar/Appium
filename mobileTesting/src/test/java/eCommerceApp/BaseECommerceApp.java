@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+
 public class BaseECommerceApp {
 
     @Test
@@ -22,10 +24,12 @@ public class BaseECommerceApp {
 //      //capabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW,"true");
 
         capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\gokha\\IdeaProjects\\mobileTesting\\src\\Apps\\General-Store.apk");
-        //capabilities.setCapability("noReset", "true");
 
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         return driver;
+
+
+
 
     }
 
