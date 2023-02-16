@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class ECommerceNegativeLogin01 extends BaseECommerceApp{
+public class ECommercePositiveLogin02 extends BaseECommerceApp{
     /*
     //1- Fill the form details and verify Toast error messages displayed appropriately for wrong inputs
     //1- hatali data ile form doldurdugunuzda hata mesajini dogrulayin
@@ -22,7 +22,7 @@ public class ECommerceNegativeLogin01 extends BaseECommerceApp{
 
 
     @Test
-    public void negativeTest() throws MalformedURLException, InterruptedException {
+    public void positiveTest() throws MalformedURLException, InterruptedException {
         AndroidDriver<MobileElement> driver = getAndroidDriver();
         Thread.sleep(7000);
         //1- Fill the form details and verify Toast error messages displayed appropriately for wrong inputs
@@ -43,31 +43,28 @@ public class ECommerceNegativeLogin01 extends BaseECommerceApp{
         countrySpinner.click();
         //ulkeyi sececegiz
         Thread.sleep(4000);
-        MobileElement expectedCountry = driver.findElementByXPath("//android.widget.TextView[@text='Angola']");
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Turkey\"))");
+        MobileElement expectedCountry = driver.findElementByXPath("//android.widget.TextView[@text='Turkey']");
         expectedCountry.click();
         Thread.sleep(5000);
         //istedigimiz ulkeyi dogru olarak sectik mi?
-        MobileElement selectedCountry = driver.findElementByXPath("//android.widget.TextView[@text='Angola']");
+        MobileElement selectedCountry = driver.findElementByXPath("//android.widget.TextView[@text='Turkey']");
         System.out.println(selectedCountry.getText());
-        Assert.assertEquals(selectedCountry.getText(), "Angola");
+        Assert.assertEquals(selectedCountry.getText(), "Turkey");
         Thread.sleep(3000);
-        //negative case icin name bos olmali
-        //        Assert.assertTrue(nameBox.getText().isEmpty());
-        nameBox.clear();
+//negative case icin name bos olmali
+//        Assert.assertTrue(nameBox.getText().isEmpty());
+        nameBox.sendKeys("Ali");
         //female secilsin
-        femaleRadioButton.click();
+        maleRadioButton.click();
         //shop butonuna tiklayalim
         letsShopButton.click();
-        //hata mesajini onayla
+//hata mesajini onayla
         Thread.sleep(2000);
-        MobileElement errorPopUpText = driver.findElementByXPath("//android.widget.Toast");
-        String errorText = errorPopUpText.getText();
-        Assert.assertEquals(errorText, "Please enter your name");
+
 
         //close app
         driver.closeApp();
 
     }
-
-
 }
