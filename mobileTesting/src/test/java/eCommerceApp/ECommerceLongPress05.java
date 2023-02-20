@@ -16,12 +16,12 @@ public class ECommerceLongPress05 extends BaseECommerceApp{
     /*
     //1- Fill the form details and verify Toast error messages displayed appropriately for wrong inputs
     //1- hatali data ile form doldurdugunuzda hata mesajini dogrulayin
-//2-Shop the items in the app by scrolling to specific Product and add to cart
-//3-Validate if the items selected in the page 2 are matching with the items displayed in check out page
-//4- Validate the total Amount displayed in the checkout page matches with sum of product amounts selected for shopping
-//5-Validate Mobile gestures working for link (long press) and navigate to WebView
-//6-Verify if user can do operations on Web view and navigate back to native app if needed.
-(go to google and search “appium” then navigate to NATIVE APP and verify it)
+    //2-Shop the items in the app by scrolling to specific Product and add to cart
+    //3-Validate if the items selected in the page 2 are matching with the items displayed in check out page
+    //4- Validate the total Amount displayed in the checkout page matches with sum of product amounts selected for shopping
+    //5-Validate Mobile gestures working for link (long press) and navigate to WebView
+    //6-Verify if user can do operations on Web view and navigate back to native app if needed.
+    (go to google and search “appium” then navigate to NATIVE APP and verify it)
 
      */
 
@@ -42,7 +42,7 @@ public class ECommerceLongPress05 extends BaseECommerceApp{
         MobileElement femaleRadioButton = driver.findElementById("com.androidsample.generalstore:id/radioFemale");
         MobileElement letsShopButton = driver.findElementById("com.androidsample.generalstore:id/btnLetsShop");
 
-//ana sayfa da miyiz? onayladik
+        //ana sayfa da miyiz? onayladik
 
         //ulkeyi secmek icin ulke butununa bastik
         countrySpinner.click();
@@ -57,31 +57,33 @@ public class ECommerceLongPress05 extends BaseECommerceApp{
         System.out.println(selectedCountry.getText());
         Assert.assertEquals(selectedCountry.getText(), "Belgium");
         Thread.sleep(3000);
-//negative case icin name bos olmali
-//        Assert.assertTrue(nameBox.getText().isEmpty());
+        //negative case icin name bos olmali
+        //        Assert.assertTrue(nameBox.getText().isEmpty());
         nameBox.sendKeys("Ali");
         //female secilsin
         maleRadioButton.click();
         //shop butonuna tiklayalim
         letsShopButton.click();
-//basrili girildi
+        //basarili girildi
         Thread.sleep(2000);
         Assert.assertTrue(driver.findElementById("com.androidsample.generalstore:id/toolbar_title").isDisplayed());
 
-//        //ik urun secilsin
-//        driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
-//        Thread.sleep(2000);
-//        //ikinci urun sec
-//        driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
+        //ik urun secilsin
+        //driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
+        //Thread.sleep(2000);
+        //ikinci urun sec
+        //driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
 
         MobileElement addButton1 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]");
         MobileElement addButton2 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[2]");
         addButton1.click();
         Thread.sleep(3000);
         addButton2.click();
-//sepete tikla
+
+        //sepete tikla
         driver.findElementById("com.androidsample.generalstore:id/appbar_btn_cart").click();
         Thread.sleep(5000);
+
         //sepette ol
         Assert.assertTrue(driver.findElementById("com.androidsample.generalstore:id/toolbar_title").isDisplayed());
 
@@ -136,4 +138,6 @@ public class ECommerceLongPress05 extends BaseECommerceApp{
         driver.closeApp();
 
     }
+
+
 }
