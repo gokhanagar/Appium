@@ -63,11 +63,11 @@ public class ECommerceTotalAmountValidation04 extends BaseECommerceApp{
         Thread.sleep(2000);
         Assert.assertTrue(driver.findElementById("com.androidsample.generalstore:id/toolbar_title").isDisplayed());
 
-//        //ik urun secilsin
-//        driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
-//        Thread.sleep(2000);
-//        //ikinci urun sec
-//        driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
+        //ik urun secilsin
+        //driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
+        //Thread.sleep(2000);
+        //ikinci urun sec
+        //driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
 
         MobileElement addButton1 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]");
         MobileElement addButton2 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[2]");
