@@ -132,4 +132,6 @@ public class ECommerceTotalAmountValidation05Scroll extends BaseECommerceApp{
         driver.closeApp();
 
     }
+
+
 }
