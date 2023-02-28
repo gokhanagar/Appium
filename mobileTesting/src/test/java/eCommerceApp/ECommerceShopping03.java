@@ -74,7 +74,7 @@ public class ECommerceShopping03 extends BaseECommerceApp{
         addButton1.click();
         Thread.sleep(3000);
         addButton2.click();
-//sepete tikla
+        //sepete tikla
         driver.findElementById("com.androidsample.generalstore:id/appbar_btn_cart").click();
         Thread.sleep(5000);
         //sepette ol
@@ -91,4 +91,6 @@ public class ECommerceShopping03 extends BaseECommerceApp{
         driver.closeApp();
 
     }
+
+
 }
