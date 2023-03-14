@@ -47,7 +47,7 @@ public class ECommerceTotalAmountValidation06 extends BaseECommerceApp{
         MobileElement femaleRadioButton = driver.findElementById("com.androidsample.generalstore:id/radioFemale");
         MobileElement letsShopButton = driver.findElementById("com.androidsample.generalstore:id/btnLetsShop");
 
-//ana sayfa da miyiz? onayladik
+        //ana sayfa da miyiz? onayladik
 
         //ulkeyi secmek icin ulke butununa bastik
         countrySpinner.click();
