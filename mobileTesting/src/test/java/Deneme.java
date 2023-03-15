@@ -14,6 +14,7 @@ public class Deneme {
     PreferenceScreen prefScreen = new PreferenceScreen();
     PreferenceDependenciesScreen preferenceDependenciesScreen = new PreferenceDependenciesScreen();
 
+    
     @Test
     public void deneme() {
 
