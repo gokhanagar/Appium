@@ -40,8 +40,6 @@ public class ECommerceTotalAmountValidation06 extends BaseECommerceApp{
 
         MobileElement homeScreenTitle = driver.findElementById("toolbar_title");
         MobileElement countrySpinner = driver.findElementById("spinnerCountry");
-
-
         MobileElement nameBox = driver.findElementById("com.androidsample.generalstore:id/nameField");
         MobileElement maleRadioButton = driver.findElementById("com.androidsample.generalstore:id/radioMale");
         MobileElement femaleRadioButton = driver.findElementById("com.androidsample.generalstore:id/radioFemale");
@@ -62,40 +60,44 @@ public class ECommerceTotalAmountValidation06 extends BaseECommerceApp{
         System.out.println(selectedCountry.getText());
         Assert.assertEquals(selectedCountry.getText(), "Belgium");
         Thread.sleep(3000);
-//negative case icin name bos olmali
-//        Assert.assertTrue(nameBox.getText().isEmpty());
+
+        //negative case icin name bos olmali
+        //Assert.assertTrue(nameBox.getText().isEmpty());
         nameBox.sendKeys("Ali");
+
         //female secilsin
         maleRadioButton.click();
+
         //shop butonuna tiklayalim
         letsShopButton.click();
-//basrili girildi
+
+        //basarili girildi
         Thread.sleep(2000);
         Assert.assertTrue(driver.findElementById("com.androidsample.generalstore:id/toolbar_title").isDisplayed());
 
-//        //ik urun secilsin
-//        driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
-//        Thread.sleep(2000);
-//        //ikinci urun sec
-//        driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
+        //ik urun secilsin
+        //driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
+        //Thread.sleep(2000);
+        //ikinci urun sec
+        //driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]").click();
 
         MobileElement addButton1 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[1]");
-//        MobileElement addButton2 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[2]");
+        //MobileElement addButton2 = driver.findElementByXPath("(//android.widget.TextView[@text='ADD TO CART'])[2]");
         addButton1.click();
-//        Thread.sleep(3000);
-//        addButton2.click();
+        //Thread.sleep(3000);
+        //addButton2.click();
 
 
         //2. urune kadar scroll yap
         driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Jordan Lift Off\"))");
 
-//        new WebDriverWait(driver, 30).until(
-//                ExpectedConditions.elementToBeClickable(MobileBy.xpath("((//android.widget.TextView[@text='Jordan Lift Off']//following-sibling::*)[2]//following-sibling::*)[2]")));
+        //new WebDriverWait(driver, 30).until(
+        //ExpectedConditions.elementToBeClickable(MobileBy.xpath("((//android.widget.TextView[@text='Jordan Lift Off']//following-sibling::*)[2]//following-sibling::*)[2]")));
 
         MobileElement ikiciUrunAddButton = driver.findElementByXPath("((//android.widget.TextView[@text='Jordan Lift Off']//following-sibling::*)[2]//following-sibling::*)[2]");
         ikiciUrunAddButton.click();
-////android.widget.TextView[@text='Jordan Lift Off']/following-sibling::android.widget.LinearLayout[2]/android.widget.TextView[2]
-////sepete tikla
+        //android.widget.TextView[@text='Jordan Lift Off']/following-sibling::android.widget.LinearLayout[2]/android.widget.TextView[2]
+        //sepete tikla
         driver.findElementById("com.androidsample.generalstore:id/appbar_btn_cart").click();
         Thread.sleep(5000);
         //sepette ol
@@ -106,7 +108,7 @@ public class ECommerceTotalAmountValidation06 extends BaseECommerceApp{
 
         //ikinci urun adi = Air Jordan 1 Mid SE
         //eger scroll yapmayacaksak alttaki urunu acip digerini yoruma lain
-//        Assert.assertEquals(driver.findElementByXPath("//android.widget.TextView[@text='Air Jordan 1 Mid SE']").getText(),"Air Jordan 1 Mid SE");
+        //Assert.assertEquals(driver.findElementByXPath("//android.widget.TextView[@text='Air Jordan 1 Mid SE']").getText(),"Air Jordan 1 Mid SE");
         Assert.assertEquals(driver.findElementByXPath("//android.widget.TextView[@text='Jordan Lift Off']").getText(),"Jordan Lift Off");
         //sepeeteki iki urunun toplami ile genel toplami karsilastirma
         MobileElement firstProductPrice = driver.findElementByXPath("(//android.widget.TextView[@resource-id='com.androidsample.generalstore:id/productPrice'])[1]");
@@ -160,8 +162,8 @@ public class ECommerceTotalAmountValidation06 extends BaseECommerceApp{
         Thread.sleep(5000);
         System.out.println(driver.getContext() + " web view gectik");
         Thread.sleep(5000);
-//        driver.get("https://www.google.com");
-//        Thread.sleep(5000);
+        //driver.get("https://www.google.com");
+        //Thread.sleep(5000);
 
         driver.findElement(By.xpath("//input[@name='q']")).sendKeys("appium" + Keys.ENTER);
 
@@ -184,4 +186,6 @@ public class ECommerceTotalAmountValidation06 extends BaseECommerceApp{
         driver.closeApp();
 
     }
+
+
 }
