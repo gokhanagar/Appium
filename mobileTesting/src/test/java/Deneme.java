@@ -8,7 +8,6 @@ import utils.Driver;
 
 public class Deneme {
 
-
     MainScreen mainScreen = new MainScreen();
     ApiDemosScreen apiDemosScreen = new ApiDemosScreen();
     PreferenceScreen prefScreen = new PreferenceScreen();
