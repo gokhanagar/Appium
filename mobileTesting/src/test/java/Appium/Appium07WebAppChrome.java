@@ -22,13 +22,13 @@ public class Appium07WebAppChrome {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5556");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        capabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
-        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,"60000");
+        capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60000");
 
         //chrome driver versiyonunuzu burdan indirebilrisiniz
         //https://chromedriver.storage.googleapis.com/index.html
         //sonrasinda driver in absolute path bir alt satirda tanimliyorsunuz
-        capabilities.setCapability("chromedriverExecutable",filePath + "\\src\\driver\\chromedriver.exe");
+        capabilities.setCapability("chromedriverExecutable", filePath + "\\src\\driver\\chromedriver.exe");
 
         AndroidDriver<MobileElement> driver =
                 new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
@@ -40,9 +40,9 @@ public class Appium07WebAppChrome {
         //burada uygulamamnin hangi turleri oldugunu gormek icin getContextHandles() kullaniyoruz
 
         Set<String> butunTurler = driver.getContextHandles();
-        for(String tur: butunTurler){
+        for (String tur : butunTurler) {
             System.out.println(tur);
-            if (tur.contains("WEBVIEW_chrome")){
+            if (tur.contains("WEBVIEW_chrome")) {
                 driver.context(tur);
             }
         }
@@ -60,74 +60,7 @@ public class Appium07WebAppChrome {
         Assert.assertTrue(emailNumber.isDisplayed());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
+
+
 }
