@@ -21,7 +21,6 @@ public class ApiDemosSteps {
 
     Screens screens = new Screens();
 
-
     @Given("App yuklensin")
     public void appYuklensin() {
 

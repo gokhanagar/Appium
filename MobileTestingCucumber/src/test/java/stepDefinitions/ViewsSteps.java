@@ -28,6 +28,7 @@ public class ViewsSteps extends ReusableMethods {
     public void kullaniciViewsButonunaTikladi() {
 
         tapOn(screens.apiDemosScreen().views);
+
     }
 
     @Then("kullanici Views ekraninda")

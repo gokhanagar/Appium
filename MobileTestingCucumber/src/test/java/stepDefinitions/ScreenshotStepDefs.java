@@ -26,5 +26,7 @@ public class ScreenshotStepDefs {
         File finalDestination = new File(target);
         // save the screenshot to the path given
         FileUtils.copyFile(source, finalDestination);
+
+
     }
 }
