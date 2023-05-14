@@ -82,6 +82,8 @@ public class ApiDemosSteps {
 
     @And("kullanici {string} yazdi")
     public void kullaniciYazdi(String text) {
+
+
         enterText(screens.preferenceDependenciesScreen().textBox, text, true);
     }
 
@@ -193,5 +195,5 @@ public class ApiDemosSteps {
 
 
     }
-    
+
 }
