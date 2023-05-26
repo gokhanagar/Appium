@@ -11,6 +11,7 @@ import java.util.List;
 public class ViewsScreen {
 
     public ViewsScreen(){
+
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()),this);
     }
 

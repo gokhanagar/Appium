@@ -9,6 +9,7 @@ import utils.Driver;
 public class DateWidgetsScreen {
 
     public DateWidgetsScreen() {
+
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()),this);
     }
 

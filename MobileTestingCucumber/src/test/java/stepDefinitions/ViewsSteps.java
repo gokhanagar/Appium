@@ -82,7 +82,8 @@ public class ViewsSteps extends ReusableMethods {
     }
 
     @And("kullanici {string} butununa uzun basti")
-    public void kullaniciButununaUzunBasti(String text) {
+    public void
+    kullaniciButununaUzunBasti(String text) {
 
         touchAction.longPress(LongPressOptions.longPressOptions().
                 withElement(ElementOption.element(Driver.getAppiumDriver().findElementByXPath("//android.widget.TextView[@text='" + text + "']"))))
