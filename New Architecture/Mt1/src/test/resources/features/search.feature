@@ -30,5 +30,3 @@ Feature:Sahibinden.com
     Then should see first car price lower than of equals "200.000" on Results Page
 
 
-
-
