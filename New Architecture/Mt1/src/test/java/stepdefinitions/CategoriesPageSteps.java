@@ -8,6 +8,7 @@ import pages.HomePage;
 import utils.DriverManager;
 
 public class CategoriesPageSteps {
+
     CategoriesPage categoriesPage = new CategoriesPage(DriverManager.getDriver());
 
     @When("user taps {string} on Categories Page")
@@ -19,4 +20,5 @@ public class CategoriesPageSteps {
     public void userCloseAlertOnCategoriesPage() {
         categoriesPage.closeAlert();
     }
+
 }
