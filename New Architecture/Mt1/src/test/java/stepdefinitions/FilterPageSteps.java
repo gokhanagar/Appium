@@ -5,6 +5,7 @@ import pages.FiltersPage;
 import utils.DriverManager;
 
 public class FilterPageSteps {
+
     FiltersPage filtersPage = new FiltersPage(DriverManager.getDriver());
 
     @When("taps {string} on Filters Page")
@@ -27,4 +28,5 @@ public class FilterPageSteps {
     public void tapsShowResultsButtonOnFiltersPage() {
         filtersPage.clickResults();
     }
+
 }
