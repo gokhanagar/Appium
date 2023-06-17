@@ -7,8 +7,8 @@ import pages.HomePage;
 import utils.DriverManager;
 
 public class HomePageSteps {
-    HomePage homePage = new HomePage(DriverManager.getDriver());
 
+    HomePage homePage = new HomePage(DriverManager.getDriver());
 
     @Given("user should see the Home Page")
     public void user_should_see_the_home_page() {
@@ -20,4 +20,5 @@ public class HomePageSteps {
         homePage.clickTab(tab);
 
     }
+
 }
