@@ -12,4 +12,5 @@ public class OrderPageStepDef {
     public void selectOnOrderPage(String text) {
         orderPage.clickAsPrice();
     }
+
 }
