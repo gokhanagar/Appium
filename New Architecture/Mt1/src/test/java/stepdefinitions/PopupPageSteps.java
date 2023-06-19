@@ -7,6 +7,7 @@ import pages.ResultsPage;
 import utils.DriverManager;
 
 public class PopupPageSteps {
+
     PopupPage apiDemosPage = new PopupPage(DriverManager.getDriver());
 
 }
