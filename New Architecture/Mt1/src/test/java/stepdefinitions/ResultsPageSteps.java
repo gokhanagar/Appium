@@ -9,6 +9,7 @@ import pages.ResultsPage;
 import utils.DriverManager;
 
 public class ResultsPageSteps {
+
     ResultsPage resultsPage = new ResultsPage(DriverManager.getDriver());
 
     @Then("should see Results on Result Page")
@@ -36,4 +37,5 @@ public class ResultsPageSteps {
     public void shouldSeeFirstCarPriceLowerThanOfEqualsOnResultsPage(String price) {
         Assert.assertTrue(resultsPage.getTextPrice().equals(price));
     }
+
 }
