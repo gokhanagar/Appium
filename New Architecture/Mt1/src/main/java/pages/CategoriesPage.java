@@ -24,4 +24,5 @@ public class CategoriesPage {
     public void closeAlert() {
         elementHelper.click(closeTab);
     }
+
 }

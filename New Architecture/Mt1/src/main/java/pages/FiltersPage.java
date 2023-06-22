@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import utils.ElementHelper;
 
 public class FiltersPage {
+
     ElementHelper elementHelper;
 
     By priceTab = AppiumBy.androidUIAutomator("new UiSelector().text(\"Fiyat\")");
@@ -36,4 +37,5 @@ public class FiltersPage {
     public void clickResults() {
         elementHelper.click(resultsTab);
     }
+
 }
