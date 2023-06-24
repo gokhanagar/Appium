@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import utils.ElementHelper;
 
 public class OrderPage {
+
     ElementHelper elementHelper;
 
     By asPrice = AppiumBy.androidUIAutomator("new UiSelector().text(\"Fiyata göre (Önce en yüksek)\")");
@@ -19,4 +20,5 @@ public class OrderPage {
 
         elementHelper.click(asPrice);
     }
+
 }
