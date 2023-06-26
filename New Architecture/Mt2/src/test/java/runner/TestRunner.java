@@ -56,4 +56,5 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     @AfterMethod
     public void afterMethod(ITestResult result) {
     }
+
 }
