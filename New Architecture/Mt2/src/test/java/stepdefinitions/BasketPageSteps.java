@@ -8,6 +8,7 @@ import pages.BasketPage;
 import utils.DriverManager;
 
 public class BasketPageSteps {
+
     BasketPage basketPage = new BasketPage(DriverManager.getDriver());
 
     @Then("should see the Basket Page")
@@ -37,4 +38,5 @@ public class BasketPageSteps {
         String currentMessage = basketPage.getEmptyMessage();
         Assert.assertEquals(currentMessage, message);
     }
+
 }
