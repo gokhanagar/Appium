@@ -7,6 +7,7 @@ import pages.GenderPage;
 import utils.DriverManager;
 
 public class GenderPageSteps {
+
     GenderPage genderPage = new GenderPage(DriverManager.getDriver());
 
     @Given("user should see the Gender Page")
