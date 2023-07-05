@@ -7,6 +7,7 @@ import pages.HomePage;
 import utils.DriverManager;
 
 public class HomePageSteps {
+
     HomePage homePage = new HomePage(DriverManager.getDriver());
 
     @When("taps Popup Close Button on Home Page")
@@ -23,4 +24,5 @@ public class HomePageSteps {
     public void tapsSearchAreaOnHomePage() {
         homePage.clickSearchArea();
     }
+
 }
