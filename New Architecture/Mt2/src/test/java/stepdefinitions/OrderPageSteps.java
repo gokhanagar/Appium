@@ -6,6 +6,7 @@ import pages.OrderPage;
 import utils.DriverManager;
 
 public class OrderPageSteps {
+
     OrderPage orderPage = new OrderPage(DriverManager.getDriver());
 
     @Then("should see the Order Page")
@@ -17,4 +18,5 @@ public class OrderPageSteps {
     public void tapsOptionOnOrderPage(String option) {
         orderPage.clickOption(option);
     }
+
 }
