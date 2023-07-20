@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import utils.ElementHelper;
 
 public class ResultPage {
+
     ElementHelper elementHelper;
 
     By filterIcon = By.id("trendyol.com:id/textViewFilter");
