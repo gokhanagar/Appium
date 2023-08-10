@@ -65,4 +65,5 @@ public class DriverManager {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implictyWait));
         return driver;
     }
+
 }
