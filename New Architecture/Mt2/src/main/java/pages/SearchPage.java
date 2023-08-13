@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import utils.ElementHelper;
 
 public class SearchPage {
+
     ElementHelper elementHelper;
 
     By backIcon = By.id("trendyol.com:id/imageview_action_start");
