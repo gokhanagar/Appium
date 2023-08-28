@@ -11,5 +11,4 @@ public class PopupPage {
         this.elementHelper = new ElementHelper(driver);
     }
 
-
 }
