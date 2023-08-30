@@ -46,4 +46,5 @@ public class ResultsPage {
         System.out.println(priceText.get(0));
         return priceText.get(0);
     }
+
 }
