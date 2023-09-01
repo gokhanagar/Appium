@@ -45,6 +45,7 @@ public class ResultsPage {
         List<String> priceText = List.of(elementHelper.getText(firsrCarPrice).split(" "));
         System.out.println(priceText.get(0));
         return priceText.get(0);
+
     }
 
 }
