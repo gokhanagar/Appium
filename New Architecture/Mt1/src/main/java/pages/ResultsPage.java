@@ -28,7 +28,6 @@ public class ResultsPage {
         elementHelper.checkElement(shareIcon);
     }
 
-
     public void clickFilter() {
         elementHelper.click(filterButton);
     }
