@@ -10,6 +10,7 @@ public class ConfigReader {
     private static Properties properties = new Properties();
 
     public static String getProperty(String key) {
+
         String value = "";
         try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
             properties.load(input);
