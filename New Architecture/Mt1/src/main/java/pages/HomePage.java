@@ -18,7 +18,6 @@ public class HomePage {
         this.elementHelper = new ElementHelper(driver);
     }
 
-
     public void checkInHomePage() {
         elementHelper.checkElement(homelogo);
     }
