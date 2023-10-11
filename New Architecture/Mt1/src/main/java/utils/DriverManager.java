@@ -13,6 +13,7 @@ import java.net.URL;
 import java.time.Duration;
 
 public class DriverManager {
+
     private static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
 
     private DriverManager() {
