@@ -193,7 +193,6 @@ public class ApiDemosSteps {
 
         System.out.println("son durum ===> " + Driver.getAppiumDriver().getContext());
 
-
     }
 
 }
